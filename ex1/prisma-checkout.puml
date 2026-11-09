@@ -5,9 +5,10 @@ actor Customer
 participant "S-ostoslista app\n(Kerää ja skannaa)" as App
 participant "S-mobiili app" as SMob
 participant "Self-checkout register" as Reg
+participant "Register light" as Light
 participant "Payment terminal" as Pay
 actor Staff
-participant "Exit" as Exit
+participant "Exit gate" as Gate
 
 == Enter store ==
 Customer -> App : open app, tap "Kerää ja skannaa"
@@ -34,25 +35,39 @@ Customer -> Reg : go to first free register, tap "Kerää ja skannaa"
 Customer -> Reg : scan phone (S-mobiili)
 Reg --> Customer : basket imported
 
-opt alcohol or other age-restricted items
-  Reg -> Staff : ID check needed
-  Staff -> Customer : check ID
-end
-
-opt discount items
-  Customer -> Staff : flag salesperson
-  Customer -> Reg : scan discount items
-  Staff -> Reg : apply discount
-end
-
 opt items not scanned with app
   Customer -> Reg : scan remaining items
 end
 
+opt age-restricted item added (by import or scan)
+  Reg -> Light : green to yellow
+  Reg -> Staff : call attendant
+  note over Customer, Reg : register locked, customer waits
+  Staff -> Reg : enter admin mode
+  Staff -> Customer : check ID
+end
+
+opt discount items (scanned last)
+  Customer -> Reg : scan discount items
+  alt by hand
+    Customer -> Staff : flag salesperson
+  else by button
+    Customer -> Reg : tap "Kutsu myyjä"
+    Reg -> Staff : call salesperson
+  end
+  alt discount labels
+    Customer -> Staff : show products with labels
+  else app discount codes
+    Customer -> Staff : show discount codes in app
+  end
+  Staff -> Reg : enter discounts manually
+end
+
 Customer -> Reg : tap "Maksa"
 Customer -> Pay : tap phone to pay
-Reg --> Customer : receipt
+Reg --> Customer : receipt (printed automatically)
 
 == Exit ==
-Customer -> Exit : show receipt
+Customer -> Gate : scan receipt
+Gate --> Customer : gate opens
 @enduml
