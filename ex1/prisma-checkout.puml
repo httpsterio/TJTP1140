@@ -1,0 +1,58 @@
+@startuml
+title Kerää ja skannaa self-checkout, Prisma Seppälä
+
+actor Customer
+participant "S-ostoslista app\n(Kerää ja skannaa)" as App
+participant "S-mobiili app" as SMob
+participant "Self-checkout register" as Reg
+participant "Payment terminal" as Pay
+actor Staff
+participant "Exit" as Exit
+
+== Enter store ==
+Customer -> App : open app, tap "Kerää ja skannaa"
+App --> Customer : "Are you in Prisma Seppälä?"
+Customer -> App : "Yes, I'm here"
+
+Customer -> App : Keräyslista > Tuo ostoslista
+Customer -> App : select shared shopping list
+App --> Customer : list products imported
+
+== Shopping ==
+loop each item on list
+  Customer -> App : scan item
+  opt more than 1
+    Customer -> App : set quantity
+  end
+end
+
+Customer -> App : tap "Kassalle"
+
+== Checkout ==
+Customer -> SMob : open S-mobiili
+Customer -> Reg : go to first free register, tap "Kerää ja skannaa"
+Customer -> Reg : scan phone (S-mobiili)
+Reg --> Customer : basket imported
+
+opt alcohol or other age-restricted items
+  Reg -> Staff : ID check needed
+  Staff -> Customer : check ID
+end
+
+opt discount items
+  Customer -> Staff : flag salesperson
+  Customer -> Reg : scan discount items
+  Staff -> Reg : apply discount
+end
+
+opt items not scanned with app
+  Customer -> Reg : scan remaining items
+end
+
+Customer -> Reg : tap "Maksa"
+Customer -> Pay : tap phone to pay
+Reg --> Customer : receipt
+
+== Exit ==
+Customer -> Exit : show receipt
+@enduml
