@@ -20,3 +20,18 @@ Teacher José Teixeira, assistant Loviisa Hurme.
 **Thu 5.11, SQL.** Remote lecture on Zoom. Covered where SQL came from: navigational databases before 1970, Codd's relational model, SEQUEL at IBM renamed to SQL, Oracle shipping before IBM. SQL is declarative, you say what you want and the database works out how. SELECT, WHERE, ORDER BY and GROUP BY do most of the work. After that a Gimkit quiz game on the course so far, but the session ended early. The rest was meant to be self-paced with the w3schools SQL tutorial and the course Dolibarr database in phpMyAdmin. Skipped the tutorial since I took a databases course over the summer and SQL is familiar.
 
 ---
+
+## Week 3
+
+Had the flu for just over a week, so missed both sessions. Neither was recorded.
+
+**Wed 11.11, Alban et al. chapters 4 to 6.** Went through the slides afterwards. They had the exam info and the guest lecture schedule, then the chapters. Ch. 4 on charting the organisation, a map is never the territory. Ch. 5 on planning the IS like a city, with weak links between blocks and strong ties inside them, and the IS shanty town when nobody does. Ch. 6 on extended vs cooperative IS, cloud and lock-in.
+
+**Thu 12.11, web services behind e-commerce.** Went through the slides at home. How a click on Buy reaches the ERP through the shop, payment provider and carrier APIs. HTTP requests and responses, REST, JSON, status codes, API keys, webhooks. Skipped the curl examples at the end and used the API from Python later for Hands-on Ex. 3.
+
+**Other work:**
+- Theoretical Ex. 1A on Mon 9.11. Went to Prisma Seppälä and used the Kerää ja skannaa self-checkout, scanning with the S-ostoslista app and paying at the register with S-mobiili. Drew it as a PlantUML sequence diagram, including the staff steps for the age-restricted item check and discount items. Returned it the same day.
+- Hands-on Ex. 1 on Mon 9.11 in the Dolibarr UI. Product Sami_Makela_surfboard, business customer Sami_Makela_in_JKL, a validated sales order for 5 units and a standard invoice from it. 2,500.00 EUR excl. tax, 3,125.00 EUR incl. 25% VAT. Returned the invoice PDF.
+- Hands-on Ex. 2 on Wed 11.11. Answered the business questions with SQL in phpMyAdmin: products for sale, customer invoices, and stock per open warehouse.
+
+---
