@@ -35,3 +35,18 @@ Had the flu for just over a week, so missed both sessions. Neither was recorded.
 - Hands-on Ex. 2 on Wed 11.11. Answered the business questions with SQL in phpMyAdmin: products for sale, customer invoices, and stock per open warehouse.
 
 ---
+
+## Week 4 (due Sat 21.11)
+
+Back on campus for the guest lectures. Went to all four.
+
+**Wed 18.11, guest lectures.** Santeri Pohjakallio from Ceili, a Salesforce consultancy, on CRM systems, CRM implementation projects and how AI changes both. CRM is people, processes and technology together. Projects run on the iron triangle of budget, schedule and scope, with the vendor selling licences, a partner implementing and the customer adopting. The old way is one UI per task with the user as the glue between systems. The new way is an AI assistant in the middle connected to CRM, ERP, email and documents through MCP, with the same permissions still applying. Most project problems aren't technical. Aleksanteri Strömberg from Accenture on SAP and testing. He covered a test automation tool for SAP, can't remember the name.
+
+**Thu 19.11, guest lectures.** Loviisa Hurme from JYU on IT procurement in the public sector and the different tendering procedures. Janne Kallunki from Cloudpermit, a permit application system spun off from a state project done with Solita. Built in Clojure, and now expanding into North America.
+
+**Other work:**
+- Theoretical Ex. 2 on Sun 15.11. Compared an ERP video (ERPNext, Odoo, Dolibarr and SAP) with a Salesforce CRM tutorial through screenshots, looking at what data each system holds and how it's used.
+- Hands-on Ex. 3 on Thu 19.11 and Fri 20.11. Two Python scripts against the Dolibarr REST API with an API key in the headers. One lists customers with unpaid invoices and the total owed, which needs a second call per invoice to get the customer name from its ID. The other creates Nordic Supply Oy as a new customer and reads it back to check the fields saved. Used Claude for help and said so in the README.
+- Group video, done solo with the teacher's OK. On Nissen, Wienand and Schuette (2023), I See No Fun in Enterprise Systems, about users' first impressions of enterprise system UX. Wrote the script, filmed on campus Wed 18.11 and Thu 19.11, edited Thu and Fri, and submitted it Sat 21.11.
+
+---
