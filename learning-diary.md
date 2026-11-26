@@ -50,3 +50,12 @@ Back on campus for the guest lectures. Went to all four.
 - Group video, done solo with the teacher's OK. On Nissen, Wienand and Schuette (2023), I See No Fun in Enterprise Systems, about users' first impressions of enterprise system UX. Wrote the script, filmed on campus Wed 18.11 and Thu 19.11, edited Thu and Fri, and submitted it Sat 21.11.
 
 ---
+
+## Week 5 (due Sat 28.11)
+**Wed 25.11, open source governance and ERP research.** Was there. Three of the teacher's research talks, covered quickly. One on Odoo: how OpenERP went open core in 2015 with a contributor agreement, a weaker licence and a paid Enterprise edition, and what happened to outside developers. First numbers show 75% of them stopped contributing to the core after the change. One on PyTorch moving from Meta to the Linux Foundation in 2022. More outside organisations and independent developers joined, but institutional developers went down, so breadth is not depth. One on TensorFlow and the roles of universities, research institutes and foundations, which sit at the edge of the network but do different jobs. Readings were Pekkola et al. (2013) on ERP research being mostly about implementation, and Kähkönen et al. (2017) on ERP development networks, where challenges split into triggers, root causes and consequences.
+
+**Thu 26.11, exam.** Took the exam. Went aight.
+
+**Other work:**
+
+Theoretical Ex. 1B on Thu 26.11 after the exam. Revisited the Prisma self-checkout diagram and added the backend systems behind the register: API, ERP, CRM and loyalty, and payment. Plus notes on how and why it changed.
